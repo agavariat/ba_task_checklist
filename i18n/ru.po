@@ -1,0 +1,169 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ba_task_checklist
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0-20180615\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-24 18:34+0000\n"
+"PO-Revision-Date: 2018-07-24 18:34+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ba_task_checklist
+#: selection:ba_task_checklist.task_checklist_item,result:0
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_task_checklist_item_cancel
+msgid "Cancel"
+msgstr "Отменено"
+
+#. module: ba_task_checklist
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_checklist_item_checklist
+#: model:ir.model.fields,field_description:ba_task_checklist.field_project_task_checklist
+#: model:ir.ui.view,arch_db:ba_task_checklist.view_checklist_form
+#: model:ir.ui.view,arch_db:ba_task_checklist.view_project_task_checklist_form
+msgid "Checklist"
+msgstr "Чек-лист"
+
+#. module: ba_task_checklist
+#: model:ir.model.fields,field_description:ba_task_checklist.field_project_task_checklist_progress
+msgid "Checklist Progress"
+msgstr "Выполнение Чек-листа"
+
+#. module: ba_task_checklist
+#: model:ir.ui.view,arch_db:ba_task_checklist.view_checklist_form
+msgid "Checklist Title..."
+msgstr "Название..."
+
+#. module: ba_task_checklist
+#: model:ir.actions.act_window,name:ba_task_checklist.action_checklist_tree
+#: model:ir.ui.menu,name:ba_task_checklist.menu_checklist
+#: model:ir.ui.view,arch_db:ba_task_checklist.view_checklist_tree
+msgid "Checklists"
+msgstr "Чек-листы"
+
+#. module: ba_task_checklist
+#: selection:ba_task_checklist.task_checklist_item,result:0
+msgid "Complete"
+msgstr "Выполнено"
+
+#. module: ba_task_checklist
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_checklist_create_uid
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_checklist_item_create_uid
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_task_checklist_item_create_uid
+msgid "Created by"
+msgstr "Создано"
+
+#. module: ba_task_checklist
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_checklist_create_date
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_checklist_item_create_date
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_task_checklist_item_create_date
+msgid "Created on"
+msgstr "Создан"
+
+#. module: ba_task_checklist
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_checklist_description
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_checklist_item_description
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_task_checklist_item_description
+msgid "Description"
+msgstr "Описание"
+
+#. module: ba_task_checklist
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_checklist_display_name
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_checklist_item_display_name
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_task_checklist_item_display_name
+msgid "Display Name"
+msgstr "Отображаемое Имя"
+
+#. module: ba_task_checklist
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_task_checklist_item_done
+msgid "Done"
+msgstr "Выполнено"
+
+#. module: ba_task_checklist
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_checklist_id
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_checklist_item_id
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_task_checklist_item_id
+msgid "ID"
+msgstr "Номер"
+
+#. module: ba_task_checklist
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_checklist_items
+#: model:ir.model.fields,field_description:ba_task_checklist.field_project_task_checklist_items
+#: model:ir.ui.view,arch_db:ba_task_checklist.view_checklist_form
+msgid "Items"
+msgstr "Пункты"
+
+#. module: ba_task_checklist
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_checklist___last_update
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_checklist_item___last_update
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_task_checklist_item___last_update
+msgid "Last Modified on"
+msgstr "Последнее изменение"
+
+#. module: ba_task_checklist
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_checklist_item_write_uid
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_checklist_write_uid
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_task_checklist_item_write_uid
+msgid "Last Updated by"
+msgstr "Последний раз обновил"
+
+#. module: ba_task_checklist
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_checklist_item_write_date
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_checklist_write_date
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_task_checklist_item_write_date
+msgid "Last Updated on"
+msgstr "Последнее обновление"
+
+#. module: ba_task_checklist
+#: model:ir.ui.view,arch_db:ba_task_checklist.view_project_task_checklist_form
+msgid "Mark cancelled?"
+msgstr "Поставить отметку 'Отменено'?"
+
+#. module: ba_task_checklist
+#: model:ir.ui.view,arch_db:ba_task_checklist.view_project_task_checklist_form
+msgid "Mark completed?"
+msgstr "Поставить отметку 'Выполнено'?"
+
+#. module: ba_task_checklist
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_checklist_item_name
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_checklist_name
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_task_checklist_item_name
+msgid "Name"
+msgstr "Название"
+
+#. module: ba_task_checklist
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_task_checklist_item_result
+msgid "Result"
+msgstr "Результат"
+
+#. module: ba_task_checklist
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_checklist_item_sequence
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_task_checklist_item_sequence
+msgid "Sequence"
+msgstr "Нумерация"
+
+#. module: ba_task_checklist
+#: model:ir.model,name:ba_task_checklist.model_project_task
+#: model:ir.model.fields,field_description:ba_task_checklist.field_ba_task_checklist_task_checklist_item_task
+msgid "Task"
+msgstr "Задача"
+
+#. module: ba_task_checklist
+#: model:ir.model,name:ba_task_checklist.model_ba_task_checklist_checklist
+msgid "ba_task_checklist.checklist"
+msgstr "ba_task_checklist.checklist"
+
+#. module: ba_task_checklist
+#: model:ir.model,name:ba_task_checklist.model_ba_task_checklist_checklist_item
+msgid "ba_task_checklist.checklist_item"
+msgstr "ba_task_checklist.checklist_item"
+
+#. module: ba_task_checklist
+#: model:ir.model,name:ba_task_checklist.model_ba_task_checklist_task_checklist_item
+msgid "ba_task_checklist.task_checklist_item"
+msgstr "ba_task_checklist.task_checklist_item"

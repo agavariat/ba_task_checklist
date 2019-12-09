@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  
+    <record model="ir.ui.view" id="view_project_task_checklist_tree">
+            <field name="name">project.task.checklist.tree</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_tree2"/>
+            <field name="arch" type="xml">
+              
+              <field name="user_id" position="after">
+                <field name="checklist" invisible="1"/>
+                <field name="checklist_progress" widget="progressbar" attrs="{'invisible' : [('checklist', '=', False)]}"/>
+              </field>
+
+            </field>
+        </record>
+  
+    <record model="ir.ui.view" id="view_project_task_checklist_kanban">
+            <field name="name">project.task.checklist.kanban</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_kanban"/>
+            <field name="arch" type="xml">
+              
+              <field name="activity_state" position="after">
+                <field name="checklist"/>
+                <field name="checklist_progress"/>
+              </field>
+              
+              <xpath expr="//div[hasclass('o_kanban_record_body')]" position="inside">
+                <div t-if="record.checklist.raw_value">
+                    <field name="checklist_progress" widget="percentpie"/>
+                </div>
+              </xpath>
+
+            </field>
+        </record>
+  
+    <record id="view_task_checklist_item_form" model="ir.ui.view">
+            <field name="name">ba_task_checklist.task.checklist.item.form</field>
+            <field name="model">ba_task_checklist.task_checklist_item</field>
+            <field name="arch" type="xml">
+                <form string="Checklist Item">
+                    <sheet>
+                      <group>
+                      <group>
+                        <field name="name" readonly="1"/>
+                        <field name="description" readonly="1"/>
+                      </group> 
+                      <group>
+                        <field name="result" readonly="1"/>
+                      </group> 
+                      </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+  
+    <record model="ir.ui.view" id="view_project_task_checklist_form">
+            <field name="name">project.task.checklist.form</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                  <field name="checklist" readonly="1" />
+                </field>
+                <page name="description_page" position="after">
+                  <page string="Checklist" attrs="{'invisible' : [('checklist', '=', False)]}">
+                    <div class="row mt4">
+                      <div class="col-sm-3 text-center">
+                        <field name="checklist_progress" widget="gauge"/>
+                      </div>
+                      <div class="col-sm-9">
+                        <field name="checklist_items">
+                          <tree decoration-success="done==True" decoration-bf="done==True or cancel==True" decoration-danger="cancel==True" create="0" edit="0" delete="0">
+                            <field name="sequence" widget="handle"/>
+                            <field name="name"/>
+                            <field name="description"/>
+                            <field name="done" invisible="1"/>
+                            <field name="cancel" invisible="1"/>
+                            <button type="object" name="click_done" confirm="Mark completed?"
+                                    icon="fa-check" class="text-success" attrs="{'invisible': ['|',('cancel','=',True),('done','=',True)]}"/>
+                            <button type="object" name="click_cancel" confirm="Mark cancelled?"
+                                    icon="fa-times" class="text-danger" attrs="{'invisible': ['|',('cancel','=',True),('done','=',True)]}"/>
+                            <field name="result"/>
+                          </tree>
+                        </field>
+                      </div> 
+                    </div> 
+                  </page>
+                </page>   
+            </field>
+        </record>  
+  
+    <record model="ir.ui.view" id="view_project_task_checklist_manager_form">
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="view_project_task_checklist_form"/>
+            <field name="groups_id" eval="[(6, 0, [ref('project.group_project_manager')])]"/>
+            <field name="arch" type="xml">
+
+                <field name="checklist" position="attributes">
+                    <attribute name="readonly">False</attribute>
+                </field>
+
+            </field>
+        </record>
+  
+    <record id="view_checklist_form" model="ir.ui.view">
+            <field name="name">ba_task_checklist.checklist.form</field>
+            <field name="model">ba_task_checklist.checklist</field>
+            <field name="arch" type="xml">
+                <form string="Checklist">
+                    <sheet>
+                      <div class="oe_title">
+                        <h1 class="o_row">
+                            <field name="name" required="1" placeholder="Checklist Title..."/>
+                        </h1>
+                      </div>
+                      <group>
+                        <field name="description" type="html"/>
+                      </group>  
+                      <div class="oe_clear"/>
+                      <label for="items" string="Items"/>
+                      <field name="items">
+                        <tree editable="1">
+                          <field name="sequence" widget="handle"/>
+                          <field name="name" required="1"/>
+                          <field name="description"/>
+                        </tree>
+                      </field>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+  
+    <record id="view_checklist_tree" model="ir.ui.view">
+            <field name="name">ba_task_checklist.checklist.tree</field>
+            <field name="model">ba_task_checklist.checklist</field>
+            <field name="arch" type="xml">
+                <tree string="Checklists">
+                    <field name="name"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+  
+    <record id="action_checklist_tree" model="ir.actions.act_window">
+            <field name="name">Checklists</field>
+            <field name="res_model">ba_task_checklist.checklist</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+    <menuitem id="menu_checklist" name="Checklists" parent="project.menu_project_config" sequence="20" action="action_checklist_tree"/>
+</odoo>
